@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function validateForm(){
+                var x
+                document.forms["myForm"]["fname"].value;
+                if (x==""){
+                    alert("Age must be filled out!");
+                    return false
+                }
+                else document.write("Age submitted");
+            
+
+                if (x < 10){
+                    alert("you must be over 10!");
+                    return false
+                }
+                else document.write("Age submitted");
+
+
+               if (x > 50){
+                    alert("you are too old !");
+                    return false
+                }
+                else document.write("Age submitted");
+            }
+
+        </script>
+    </head>
+
+    <body>
+        <form name="myForm" onsubmit="validateForm()">
+            Age: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+            <p id="message"></p>
+        </form>
+    </body>
+</html>
